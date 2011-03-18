@@ -8,7 +8,7 @@ LOCAL_NO_STANDARD_LIBRARIES := true
 LOCAL_JAVA_LIBRARIES := core
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := sqlite-jdbc
-include $(BUILD_JAVA_LIBRARY)
+include $(BUILD_STATIC_JAVA_LIBRARY)
 
 sqlite_jdbc_src_files := \
     src/main/native/sqlite_jni.c
@@ -33,8 +33,7 @@ ifeq ($(WITH_HOST_DALVIK),true)
     LOCAL_JAVA_LIBRARIES := core-hostdex
     LOCAL_JAVACFLAGS := $(local_javac_flags)
     LOCAL_MODULE_TAGS := optional
-    LOCAL_MODULE := sqlite-jdbc-hostdex
-    LOCAL_BUILD_HOST_DEX := true
+    LOCAL_MODULE := sqlite-jdbc-host
     include $(BUILD_HOST_JAVA_LIBRARY)
 
     include $(CLEAR_VARS)
