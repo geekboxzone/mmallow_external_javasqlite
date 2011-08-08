@@ -13,7 +13,6 @@ include $(BUILD_STATIC_JAVA_LIBRARY)
 sqlite_jdbc_src_files := \
     src/main/native/sqlite_jni.c
 sqlite_jdbc_local_c_includes := \
-    $(JNI_H_INCLUDE) \
     external/sqlite/dist
 
 include $(CLEAR_VARS)
