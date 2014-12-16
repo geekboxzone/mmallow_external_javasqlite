@@ -22,7 +22,6 @@ LOCAL_SHARED_LIBRARIES += libsqlite
 LOCAL_MODULE_TAGS := optional
 # This name is dictated by the fact that the SQLite code calls loadLibrary("sqlite_jni").
 LOCAL_MODULE := libsqlite_jni
-LOCAL_PRELINK_MODULE := false
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -38,5 +37,4 @@ LOCAL_C_INCLUDES += $(sqlite_jdbc_local_c_includes)
 LOCAL_SHARED_LIBRARIES += libsqlite
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libsqlite_jni
-LOCAL_PRELINK_MODULE := false
 include $(BUILD_HOST_SHARED_LIBRARY)
