@@ -27,7 +27,6 @@ include $(BUILD_SHARED_LIBRARY)
 ifeq ($(HOST_OS),linux)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := $(call all-java-files-under,src/main/java)
-LOCAL_JAVACFLAGS := $(local_javac_flags)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := sqlite-jdbc-host
 include $(BUILD_HOST_DALVIK_STATIC_JAVA_LIBRARY)
